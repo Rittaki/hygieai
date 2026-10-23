@@ -40,4 +40,10 @@ the file's owner in plain language.
 
 ## Running locally
 
-_Coming in Week 1._
+Requires Docker with Compose v2.
+
+```bash
+cp .env.example .env   # then set a strong POSTGRES_PASSWORD
+docker compose up -d --build
+curl http://127.0.0.1:8000/health   # {"status":"ok"}
+```
